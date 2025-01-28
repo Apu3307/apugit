@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Fact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .fact-container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="fact-container">
+        <h1>Random iPhone Fact</h1>
+        <p id="fact"></p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const facts = [
+                "The first iPhone was introduced by Steve Jobs on January 9, 2007, during a Macworld conference. It was later released on June 29, 2007.",
+                "The iPhone runs on Apple's iOS operating system, which was originally called iPhone OS. The name was changed to iOS with the release of iOS 4 in June 2010.",
+                "The App Store, launched in July 2008, revolutionized the software distribution model by allowing developers to create and sell applications directly to consumers. As of 2023, the App Store hosts millions of apps.",
+                "The iPhone 4, introduced in 2010, marked a significant design shift with its stainless steel frame and aluminosilicate glass, which Apple claimed was 30 times harder than plastic.",
+                "Siri, a voice-activated personal assistant, was introduced with the iPhone 4S in October 2011. It allowed users to use voice commands to operate their device and perform tasks.",
+                "The iPhone 5S, released in 2013, was the first to feature Touch ID, a fingerprint recognition system that enhanced security and user convenience.",
+                "The iPhone 7, released in 2016, controversially removed the 3.5mm headphone jack, pushing forward the adoption of wireless headphone technology.",
+                "The iPhone X, released in 2017, introduced Face ID, using facial recognition technology to unlock the device and authenticate payments.",
+                "Over the years, the iPhone has significantly advanced in camera technology, with the iPhone 11 Pro (2019) introducing a triple-camera system that includes wide, ultra-wide, and telephoto lenses.",
+                "Apple has increasingly focused on environmental sustainability, with the iPhone 12 and later models no longer including a power adapter or EarPods in the box, reducing carbon emissions associated with their production and shipping."
+            ];
+
+            const factElement = document.getElementById('fact');
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factElement.textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
